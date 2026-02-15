@@ -1,0 +1,15 @@
+{
+    "name": "clipshare-monorepo",
+    "version": "1.0.0",
+    "scripts": {
+        "client-install": "cd client && npm install",
+        "server-install": "cd server && npm install",
+        "install-all": "npm run client-install && npm run server-install",
+        "client": "cd client && npm run dev",
+        "server": "cd server && npm run dev",
+        "dev": "concurrently \"npm run server\" \"npm run client\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
